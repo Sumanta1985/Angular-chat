@@ -1,0 +1,7 @@
+.header {
+    background-image: url(image/hpack.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-attachment: fixed;
+}
