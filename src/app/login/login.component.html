@@ -44,6 +44,7 @@
     </form>
   </div>
 </div> -->
+
 <div class="container-fluid">
   <body>
       <div class="row">
@@ -59,36 +60,40 @@
           <div class="form-group">
             <label class="control-label col-sm-5" for="email">Email:</label>
             <div class="col-sm-4">
-              <input type="email" class="form-control" id="email" placeholder="Enter email">
+              <input type="email" class="form-control" id="email" placeholder="Enter email" autofocus/>
             </div>
           </div>
 
           <div class="form-group">
             <label class="control-label col-sm-5" for="pwd">Password:</label>
             <div class="col-sm-4">
-              <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+              <input type="password" class="form-control" id="pwd" placeholder="Enter password"/>
             </div>
           </div>
 
           <div class="form-group">
-            <label class="control-label col-sm-5" for="pwd">Reenter Password:</label>
+            <label class="control-label col-sm-5" for="rpwd">Reenter Password:</label>
             <div class="col-sm-4">
-              <input type="password" class="form-control" id="pwd" placeholder="ReEnter password">
+              <input type="password" class="form-control" id="rpwd" placeholder="ReEnter password"/>
             </div>
           </div>
 
           <div class="form-group">
             <label class="control-label col-sm-5" for="display">Display Name:</label>
             <div class="col-sm-4">
-              <input type="text" class="form-control" id="dispaly" placeholder="Enter Display Name">
+              <input type="text" class="form-control" id="dispaly" placeholder="Enter Display Name"/>
             </div>
           </div>
 
           <div class="form-group">
             <label class="control-label col-sm-5" for="channel">Channel Name</label>
             <div class="col-sm-4">
-              <input list="channel" name="c_name" type="text" class="form-control" id="channel" placeholder="Enter Channel Name">
-              <datalist id="channel"></datalist>
+              <input list="channel" name="c_name" type="text" class="form-control" placeholder="Enter Channel Name" autocomplete="off"/>
+              <datalist id="channel">
+                <option *ngFor="let channel of channels" [value]="channel.c_name"></option>
+                  <!-- <option value="aaa"></option>
+                  <option value="bbb"></option> -->
+              </datalist>
             </div>
           </div>
 
@@ -96,7 +101,7 @@
             <div class="col-sm-offset-5 col-sm-10">
               <div class="checkbox">
                 <label>
-                  <input type="checkbox"> Remember me</label>
+                  <input type="checkbox"/> Remember me</label>
               </div>
             </div>
           </div>
@@ -111,4 +116,9 @@
       </div>
   </body>
 </div>
+
+<h3>Welcome {{chat}}</h3>
+<h6 *ngFor="let channel of channels;let i=index" >
+  Welcome to ! {{channel.c_name}}
+</h6>
 
