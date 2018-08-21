@@ -22,6 +22,12 @@ export class LoginComponent implements OnInit {
         console.log('chatChannels', chatChannels);
         this.channels = chatChannels;
         console.log('channels:', this.channels);
+        // this.channels.forEach((channel) => {
+        //   const options = jQuery('<option></option>');
+        //   console.log('channel', channel);
+        //   options.text(channel.c_name);
+        //   jQuery('#channel').append(options);
+        // });
       });
     });
 
