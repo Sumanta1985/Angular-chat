@@ -10,6 +10,7 @@ export class ChatpageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // console.log(form);
   }
 
 }

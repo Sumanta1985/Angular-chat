@@ -11,7 +11,7 @@ const port=process.env.PORT||3000;
 
 const app=express();
 const server=http.createServer(app);
-const publicPath=path.join(__dirname,'../public');
+const publicPath=path.join(__dirname,'..','public');
 
 var user=new Users();
 var channel=new Channels();
